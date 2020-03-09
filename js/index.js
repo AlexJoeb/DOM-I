@@ -55,6 +55,25 @@ navItemFour.textContent = siteContent.nav["nav-item-4"];
 navItemFive.textContent = siteContent.nav["nav-item-5"];
 navItemSix.textContent = siteContent.nav["nav-item-6"];
 
+// Color Green
+navItemOne.style.color = 'green';
+navItemTwo.style.color = 'green';
+navItemThree.style.color = 'green';
+navItemFour.style.color = 'green';
+navItemFive.style.color = 'green';
+navItemSix.style.color = 'green';
+
+let navItemSeven = document.createElement("a");
+navItemSeven.text = "Secret Button";
+navItemSeven.style.color = 'green';
+
+let navItemEight = document.createElement("a");
+navItemEight.text = "Not So Secret Button";
+navItemEight.style.color = 'green';
+
+document.querySelector("header nav").append(navItemSeven);
+document.querySelector("header nav").prepend(navItemEight);
+
 let ctaH1 = document.querySelector(".cta-text h1");
 let ctaButton = document.querySelector(".cta-text button");
 let ctaImg = document.querySelector("#cta-img");
@@ -91,16 +110,6 @@ productContent.textContent = siteContent["main-content"]["product-content"];
 visionH4.textContent = siteContent["main-content"]["vision-h4"];
 visionContent.textContent = siteContent["main-content"]["vision-content"];
 
-// "contact": {
-//   "contact-h4" : "Contact",
-//   "address" : "123 Way 456 Street Somewhere, USA",
-//   "phone" : "1 (888) 888-8888",
-//   "email" : "sales@greatidea.io",
-// },
-// "footer": {
-//   "copyright" : "Copyright Great Idea! 2018"
-// },
-
 let contactH4 = document.querySelector('.contact h4');
 let contactAddress = document.querySelector('.contact p:nth-of-type(1)');
 let contactPhone = document.querySelector('.contact p:nth-of-type(2)');
@@ -113,3 +122,9 @@ contactEmail.textContent = siteContent.contact["email"];
 
 let footer = document.querySelector("footer p");
 footer.textContent = siteContent.footer.copyright;
+
+
+// Stretch
+document.querySelector(".cta-text button").addEventListener("click", () => {
+  document.querySelector('#cta-img').src = "https://media.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif"
+})
