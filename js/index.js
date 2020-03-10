@@ -41,27 +41,12 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navItemOne = document.querySelector("nav a:nth-of-type(1)");
-let navItemTwo = document.querySelector("nav a:nth-of-type(2)");
-let navItemThree = document.querySelector("nav a:nth-of-type(3)");
-let navItemFour = document.querySelector("nav a:nth-of-type(4)");
-let navItemFive = document.querySelector("nav a:nth-of-type(5)");
-let navItemSix = document.querySelector("nav a:nth-of-type(6)");
-
-navItemOne.textContent = siteContent.nav["nav-item-1"];
-navItemTwo.textContent = siteContent.nav["nav-item-2"];
-navItemThree.textContent = siteContent.nav["nav-item-3"];
-navItemFour.textContent = siteContent.nav["nav-item-4"];
-navItemFive.textContent = siteContent.nav["nav-item-5"];
-navItemSix.textContent = siteContent.nav["nav-item-6"];
-
 // Color Green
-navItemOne.style.color = 'green';
-navItemTwo.style.color = 'green';
-navItemThree.style.color = 'green';
-navItemFour.style.color = 'green';
-navItemFive.style.color = 'green';
-navItemSix.style.color = 'green';
+let anchors = document.querySelectorAll('nav a');
+anchors.forEach((item, index) => {
+  item.style.color = 'green'
+  item.textContent = siteContent.nav[`nav-item-${index+1}`];
+});
 
 let navItemSeven = document.createElement("a");
 navItemSeven.text = "Secret Button";
@@ -102,6 +87,7 @@ const productH4 = document.querySelector('.bottom-content .text-content:nth-of-t
 const productContent = document.querySelector('.bottom-content .text-content:nth-of-type(2) p');
 const visionH4 = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4');
 const visionContent = document.querySelector('.bottom-content .text-content:nth-of-type(3) p');
+
 
 servicesH4.textContent = siteContent["main-content"]["services-h4"];
 servicesContent.textContent = siteContent["main-content"]["services-content"];
